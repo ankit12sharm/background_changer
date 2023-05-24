@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background chnager</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 30px;
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        p{
+            font-size: 18px;
+            text-align: justify;
+        }
+        .btn{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border: solid green 2px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        #white{
+            background-color: white;
+        }
+        #aqua{
+          background-color: aqua;
+        }
+        #red{
+              background-color: red;
+        }
+        #black{
+          background-color: black;
+        }
+        #color_switcher{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="color_switcher">
+        <span class="btn" id="white" onclick="changeBG('#ffffff')"></span>
+        <span class="btn" id="aqua" onclick="changeBG('#7fffd4')"></span>
+        <span class="btn" id="red" onclick="changeBG('#ce9aff')"></span>
+        <span class="btn" id="black" onclick="changeBG('#000000')"></span>
+
+    </div>
+    <h1 class="text">About us</h1>
+    <img src="https://www.susangreenecopywriter.com/wp-content/uploads/2013/01/iStock_000039291924_Medium.jpg" alt="">
+    <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores architecto minima omnis laudantium rerum tenetur reiciendis id consequatur perspiciatis debitis voluptate, quis iusto similique, nulla fuga voluptatibus ducimus molestias quibusdam consectetur voluptatem aspernatur dolore repellat unde. Vel inventore commodi ex quam eaque sit vero maxime sed obcaecati, laudantium ab, pariatur asperiores. Quo illo tempora repellat ratione, officiis repudiandae eum nulla! Nisi esse reiciendis minus, magni dicta veritatis sunt neque ducimus maxime? In laboriosam consequatur repellat veniam reiciendis dolores excepturi debitis cum reprehenderit magni, placeat ex a possimus explicabo blanditiis impedit at odio aliquid porro illo modi laborum tempora amet. Natus magni corporis voluptates consequuntur! Consequatur quam cupiditate laboriosam accusamus corporis autem debitis architecto et quisquam! Et quia aperiam fuga aliquam voluptas laboriosam accusantium, veritatis repellat corrupti quibusdam. Nulla, nesciunt totam repudiandae sunt, iste dolorum quo hic iusto voluptas fugiat illum at fuga inventore velit aut quibusdam error temporibus corrupti ab commodi repellendus facilis maiores fugit. Mollitia itaque vitae beatae tempora corporis quod dolores repellendus maxime temporibus iste sequi perferendis a totam vero architecto dolor, laboriosam magnam minima, fugiat ipsa quis? Iste perferendis iusto maiores doloribus sequi dolores dolorum, quisquam eos quasi ullam consectetur ea iure quidem deleniti eaque sunt dolorem.
+    </p>
+</body>
+</html>
+<script>
+      function changeBG(color){
+        document.body.style.background = color;
+        let txt = document.getElementsByClassName("text");
+        if(color == '#000000'){
+            for(let elm  of txt){
+                elm.style.color = "white";
+            }
+        } else{
+            for(let elm  of txt){
+                elm.style.color = "black";
+            }
+        }
+      }
+</script>
